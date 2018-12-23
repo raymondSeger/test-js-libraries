@@ -1,0 +1,23 @@
+{
+  "name": "test-js-libraries",
+  "version": "1.0.0",
+  "description": "",
+  "main": "serverEntryPoint.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node serverEntryPoint.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raymondSeger/test-js-libraries.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raymondSeger/test-js-libraries/issues"
+  },
+  "homepage": "https://github.com/raymondSeger/test-js-libraries#readme",
+  "dependencies": {
+    "moment": "^2.23.0"
+  }
+}
