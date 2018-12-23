@@ -9,6 +9,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="https://momentjs.com/downloads/moment-timezone-with-data.js"></script>
 </head>
 <body>
     <p>see console</p>
@@ -17,6 +18,14 @@
         (function($){
 
             console.log ( moment().format('MMMM Do YYYY, h:mm:ss a') );
+
+            var newYork    = moment.tz("2014-06-01 12:00", "America/New_York");
+            var losAngeles = newYork.clone().tz("America/Los_Angeles");
+            var london     = newYork.clone().tz("Europe/London");
+
+            console.log ( newYork.format() );    // 2014-06-01T12:00:00-04:00
+            console.log ( losAngeles.format() );  // 2014-06-01T09:00:00-07:00
+            console.log ( london.format() );     // 2014-06-01T17:00:00+01:00
 
         })(jQuery);
     </script>
